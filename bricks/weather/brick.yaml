@@ -7,6 +7,9 @@ version: 0.1.0+1
 # mason ls
 # mason cache clear
 # mason get
+
+# se for executar um json
+# mason make weather -c ./bricks/weather/config.json
 vars:
   - name
   - city

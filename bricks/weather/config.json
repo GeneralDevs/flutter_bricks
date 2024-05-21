@@ -1,0 +1,13 @@
+{
+    "name" : "Gabriel",
+    "city": "London",
+    "condition": "Cloudy",
+    "temperature": "17c",
+    "feels_like": "15c",
+    "alerts_issued": true,
+    "alerts": [
+        {"alert": "Dangerous driving conditions"},
+        {"alert": "Dense fog tonight"}
+    ]
+}
+// mason make weather -c ./bricks/weather/config.json
