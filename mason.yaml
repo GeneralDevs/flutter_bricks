@@ -3,8 +3,13 @@ bricks:
     path: bricks/weather
   hello_world:
     path: bricks/hello_world
+  page:
+    path: bricks/page
   # todos:
   #   git: #path principal do repo  ex: flutter_project
   #     url: git@github.com:felangel/mason.git
   #     #indicar o caminho dentro do path principal ex: lib/main
   #     path: bricks/todos
+# passar no analysis_options.yaml, para desligar os erros do mason ao concatenar as variaveis em arquivo dart
+# analyzer:
+#   exclude: [mason/**]

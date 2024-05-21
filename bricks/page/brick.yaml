@@ -1,0 +1,7 @@
+name: page
+description: A page widget
+version: 0.1.0+1
+
+vars:
+  - name
+  - stateful
