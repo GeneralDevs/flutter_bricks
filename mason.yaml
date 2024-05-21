@@ -1,6 +1,8 @@
 bricks:
   weather:
     path: bricks/weather
+  hello_world:
+    path: bricks/hello_world
   # todos:
   #   git: #path principal do repo  ex: flutter_project
   #     url: git@github.com:felangel/mason.git

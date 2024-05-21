@@ -1,0 +1,7 @@
+name: hello_world
+description: A hello
+version: 0.1.0+1
+
+# mason make hello_world -o ./generated/hello
+vars:
+  - name
