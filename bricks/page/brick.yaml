@@ -5,3 +5,4 @@ version: 0.1.0+1
 vars:
   - name
   - stateful
+# mason make page -o ./generated/page -c ./bricks/page/config.json
