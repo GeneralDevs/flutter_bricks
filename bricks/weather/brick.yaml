@@ -9,7 +9,7 @@ version: 0.1.0+1
 # mason get
 
 # se for executar um json
-# mason make weather -c ./bricks/weather/config.json
+# mason make weather -c ./bricks/weather/config.json -o ./generated/weather
 vars:
   - name
   - city

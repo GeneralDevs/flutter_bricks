@@ -10,4 +10,3 @@
         {"alert": "Dense fog tonight"}
     ]
 }
-// mason make weather -c ./bricks/weather/config.json
