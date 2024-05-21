@@ -1,0 +1,16 @@
+name: weather
+description: A simple weather forecast brick
+version: 0.1.0+1
+
+# O template de pastas/arquivos que estiver dentro do "__brick__" será representado apos a criacao do brick
+# mason list
+# mason ls
+# mason cache clear
+# mason get
+vars:
+  - name
+  - city
+  - condition
+  - temperature
+  - alerts_issued
+  - alerts

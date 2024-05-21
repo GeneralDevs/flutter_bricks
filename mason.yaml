@@ -1,0 +1,8 @@
+bricks:
+  weather:
+    path: bricks/weather
+  # todos:
+  #   git: #path principal do repo  ex: flutter_project
+  #     url: git@github.com:felangel/mason.git
+  #     #indicar o caminho dentro do path principal ex: lib/main
+  #     path: bricks/todos
