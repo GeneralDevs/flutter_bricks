@@ -15,3 +15,4 @@ vars:
   #   prompt: Its a statefull?
 # mason make page -o ./generated/page
 # -c ./bricks/page/config.json
+# mason make feature -o ./generated/example_repo construir na raiz para ter acesso a pasta de test tambem

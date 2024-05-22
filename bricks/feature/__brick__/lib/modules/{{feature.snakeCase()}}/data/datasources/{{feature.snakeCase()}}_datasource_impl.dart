@@ -1,3 +1,4 @@
+import '../../core/exceptions/exceptions.dart';
 import '{{feature.snakeCase()}}_datasource.dart';
 
 final class {{feature.pascalCase()}}DatasourceImpl implements {{feature.pascalCase()}}Datasource {
@@ -8,12 +9,12 @@ final class {{feature.pascalCase()}}DatasourceImpl implements {{feature.pascalCa
     try {
 
     } on Exception catch (error, stackTrace) {
-      throw Exception(
-      'Error',
+      throw {{feature.pascalCase()}}Exception(
+        message: error.toString(),
       );
     } catch (error, stackTrace) {
-      throw Exception(
-      'Error',
+      throw {{feature.pascalCase()}}Exception(
+        message: 'Error',
       );
     }
   }
