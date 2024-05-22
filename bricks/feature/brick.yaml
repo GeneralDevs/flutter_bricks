@@ -21,3 +21,5 @@ vars:
 #enum para tipo de metodo http
 #se tem input no usecase/data
 #se tem query parameter
+
+# mason make feature -o ./
