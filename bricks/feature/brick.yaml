@@ -16,3 +16,8 @@ vars:
 # mason make page -o ./generated/page
 # -c ./bricks/page/config.json
 # mason make feature -o ./generated/example_repo construir na raiz para ter acesso a pasta de test tambem
+
+#nome da feature
+#enum para tipo de metodo http
+#se tem input no usecase/data
+#se tem query parameter
