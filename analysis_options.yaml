@@ -1,2 +1,5 @@
 analyzer:
-  exclude: [bricks/**, generated/**]
+  exclude: [bricks/**, 
+  # generated/**
+  generated/page
+  ]
