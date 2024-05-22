@@ -23,3 +23,16 @@ vars:
 #se tem query parameter
 
 # mason make feature -o ./
+
+# mason add -g todos --git-url https://github.com/felangel/mason --git-path bricks/todos
+# list all locally installed bricks
+# mason list
+
+# list all globally installed bricks
+# mason list --global
+
+# use alias "ls" instead of "list" for a shorthand syntax
+# mason ls
+
+# list all globally installed bricks shorthand syntax
+# mason ls -g
