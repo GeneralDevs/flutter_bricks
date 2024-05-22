@@ -5,6 +5,8 @@ bricks:
     path: bricks/hello_world
   page:
     path: bricks/page
+  feature:
+    path: bricks/feature
   # todos:
   #   git: #path principal do repo  ex: flutter_project
   #     url: git@github.com:felangel/mason.git

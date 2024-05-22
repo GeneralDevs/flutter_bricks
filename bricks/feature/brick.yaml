@@ -1,0 +1,17 @@
+name: feature
+description: Brick to build a clean architecture feature
+version: 0.1.0+1
+
+vars:
+  feature:
+    type: string
+    description: Your name
+    default: Dash
+    prompt: What is your Feature name? ex auth/user/cards
+  stateful:
+    type: boolean
+    description: teste
+    default: false
+    prompt: Its a statefull?
+# mason make page -o ./generated/page
+# -c ./bricks/page/config.json

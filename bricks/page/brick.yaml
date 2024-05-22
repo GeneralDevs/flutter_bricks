@@ -3,6 +3,14 @@ description: A page widget
 version: 0.1.0+1
 
 vars:
-  - name
-  - stateful
+  name:
+    type: string
+    description: Your name
+    default: Dash
+    prompt: What is your name?
+  stateful:
+    type: boolean
+    description: teste
+    default: false
+    prompt: Its a statefull?
 # mason make page -o ./generated/page -c ./bricks/page/config.json
