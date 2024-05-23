@@ -8,3 +8,16 @@ vars:
     description: Feature name
     default: User
     prompt: What is your Feature name? ex auth/user/cards
+  response:
+    type: boolean
+    default: false
+    prompt: Voce tera uma response?
+  http_method:
+    default: GET
+    description: The HTTP method to use.
+    type: enum
+    values:
+      - GET
+      - POST
+      - PUT
+      - DELETE
