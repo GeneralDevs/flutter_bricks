@@ -1,9 +1,25 @@
+
+
+// cai nesse bloco se for true
 {{#response}}
 return response.data
 {{/response}}
 
 
-{{^variavel}}
+
+
+{{model}}
+
+
+
+// cai nesse bloco se for false
+{{^response}}
 
 nao tem response
-{{/variavel}}
+{{/response}}
+
+
+
+
+
+{{http_method}}

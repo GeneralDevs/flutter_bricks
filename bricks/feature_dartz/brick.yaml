@@ -21,3 +21,16 @@ vars:
       - POST
       - PUT
       - DELETE
+  model:
+    default: [apple, banana]
+    description: aaa
+    type: array
+    values:
+      - teste
+      - teste
+  #no array ele cobra passar o values, e escolhe uma das opcoes para gerar
+  # model:
+  #   default: []
+  #   description: aaa
+  #   type: list
+# no list eu so escreve na cli oq quero dentro da lista ex banana, uva, pera  e ele ja coloca as [] em volta

@@ -1,0 +1,9 @@
+{
+    "feature" : "Auth",
+    "response": true,
+    "http_method": "post",
+    "model": [
+        { "name": "firstName", "type": "String" },
+        { "name": "lastName", "type": "String?" }
+    ]
+}
