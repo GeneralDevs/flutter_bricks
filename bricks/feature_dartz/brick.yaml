@@ -21,13 +21,13 @@ vars:
       - POST
       - PUT
       - DELETE
-  model:
-    default: [apple, banana]
-    description: aaa
-    type: array
-    values:
-      - teste
-      - teste
+  # model:
+  #   default: [apple, banana]
+  #   description: aaa
+  #   type: array
+  #   values:
+  #     - teste
+  #     - teste
   #no array ele cobra passar o values, e escolhe uma das opcoes para gerar
   # model:
   #   default: []
