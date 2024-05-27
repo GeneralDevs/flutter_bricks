@@ -16,6 +16,9 @@ Future<void> run(HookContext context) async {
   final modelStyle = context.vars['style'] as String;
   var hasRelations = context.vars['relations'] != null &&
       (context.vars['relations'] as List).isNotEmpty;
+
+  //Todo! aqui vem a logica dos templates com o use_aquilo, se na lista dos adicionais
+  // foi adicionado tostring, equatable, eles viram boleanos aqui.
   context.vars = {
     ...context.vars,
     'hasRelations': hasRelations,
@@ -67,6 +70,7 @@ Future<void> run(HookContext context) async {
       )
     ];
 
+//todo! aqui eu concateno as variaveis do brick.yaml, adicionando outras.
     context.vars = {
       ...context.vars,
       'relations': (classToParse?.dependencies ?? [])
@@ -107,7 +111,12 @@ Future<void> run(HookContext context) async {
         Property.fromMap(property as Map<String, dynamic>),
       );
     }
-  } else if (logger.confirm(
+  } else if (
+      //Todo! adicionando atributos na mao
+      // String name
+      // int age
+      // depois digita "e" para sair + enter
+      logger.confirm(
     '? Do you want to add properties to your model?',
     defaultValue: true,
   )) {

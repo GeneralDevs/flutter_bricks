@@ -9,4 +9,11 @@ void run(HookContext context) {
 
   // Update vars.
   context.vars['name'] = 'jonas';
+
+//todo! aqui eu concateno as variaveis do brick.yaml, adicionando outras, no caso o fullname ali por exemplo.
+// assim nao necessariamente todas as variveis precisam ser passadas la
+  context.vars = {
+    ...context.vars,
+    'fullname': 'robertao',
+  };
 }
