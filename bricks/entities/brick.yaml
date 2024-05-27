@@ -30,7 +30,6 @@ vars:
     prompt: What is the model style?
     values:
       - basic
-
   jsonFile:
     default: ""
     type: string
