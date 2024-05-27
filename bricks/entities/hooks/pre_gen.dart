@@ -46,7 +46,7 @@ Future<void> run(HookContext context) async {
   logger.info('${infos['json']}');
 
   /// If there is seeded-json, then handle json
-  if (context.vars['json'] is String &&
+  if (context.vars['json'] is bool &&
       (context.vars['json'] as String).isNotEmpty) {
     final classes = ModelGenerator(context.vars['entity_name'])
         .generateClassDefinitions(context.vars['json'] as String);
