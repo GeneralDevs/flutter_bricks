@@ -13,6 +13,9 @@ bricks:
     path: bricks/models_bundle
   a:
     path: bricks/a
+
+  entities:
+    path: bricks/entities
 # mason make teste -o ./generated/lib -c ./bricks/model/model_config_template.json
 
 # mason make models_bundle -o ./generated/lib -c ./bricks/models_bundle/models_config_template.json
