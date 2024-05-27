@@ -5,7 +5,7 @@ void run(HookContext context) {
   var name = context.vars['name'];
 
   // Use the `Logger` instance.
-  context.logger.info('Hello $name!');
+  context.logger.info('Hello $name! log teste');
 
   // Update vars.
   context.vars['name'] = 'jonas';
