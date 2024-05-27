@@ -32,6 +32,7 @@ Future<void> run(HookContext context) async {
   };
 
   final jsonFile = File(context.vars['jsonFile']);
+
   final jsonIndex = context.vars['jsonIndex'] as int;
 
   /// Check for json file --jsonFile
@@ -41,6 +42,8 @@ Future<void> run(HookContext context) async {
       'json': jsonFile.readAsStringSync(),
     };
   }
+
+  logger.info('${infos['json']}');
 
   /// If there is seeded-json, then handle json
   if (context.vars['json'] is String &&
