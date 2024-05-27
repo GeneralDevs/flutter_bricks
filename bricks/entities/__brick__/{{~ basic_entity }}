@@ -1,17 +1,13 @@
 {{#use_equatable}}import 'package:equatable/equatable.dart';{{/use_equatable}}
 {{> relations }}
-/// {@template {{{entity_name.snakeCase()}}}}
-/// {{entity_name.pascalCase()}} description
-/// {@endtemplate}
-class {{entity_name.pascalCase()}}{{#use_equatable}} extends Equatable{{/use_equatable}} {
-  /// {@macro {{{entity_name.snakeCase()}}}}
+
+base class {{entity_name.pascalCase()}}{{#use_equatable}} extends Equatable{{/use_equatable}} {
   const {{entity_name.pascalCase()}}({{#hasProperties}}{ {{#properties}}
     {{^isNullable}}required {{/isNullable}}this.{{name.camelCase()}},{{/properties}}
   }{{/hasProperties}});
 {{#use_json}}
   {{> basic_from_json }}{{/use_json}}
 {{#properties}}
-  /// A description for {{name.camelCase()}}
   final {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}} {{name.camelCase()}};
 {{/properties}}{{#use_copywith}}
   {{> copy_with }}{{/use_copywith}}

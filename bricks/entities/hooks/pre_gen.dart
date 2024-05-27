@@ -13,7 +13,6 @@ import 'utils/recase.dart';
 Future<void> run(HookContext context) async {
   final logger = context.logger;
   final additionals = context.vars['additionals'] as List<dynamic>;
-  final modelStyle = context.vars['style'] as String;
   var hasRelations = context.vars['relations'] != null &&
       (context.vars['relations'] as List).isNotEmpty;
 
@@ -24,7 +23,7 @@ Future<void> run(HookContext context) async {
     'hasRelations': hasRelations,
     'use_copywith': additionals.contains('copyWith'),
     'use_equatable': additionals.contains('equatable'),
-    'use_none': modelStyle == 'basic',
+    'use_none': true,
     'jsonIndex': ((context.vars['jsonIndex'] as int?) ?? 0),
   };
 

@@ -1,0 +1,31 @@
+{
+  "entity_name": "entidade",
+  "additionals": ["copyWith", "equatable"],
+  "style": "basic",
+  "relations": [{ "name": "user" }],
+  "properties": [
+    { "name": "firstName", "type": "String?" },
+    { "name": "lastName", "type": "String?" },
+    { "name": "age", "type": "int" },
+    { "name": "isHappy", "type": "bool" },
+    { "name": "favouriteNumber", "type": "int" },
+    { "name": "nicknames", "type": "List<String>" },
+    { "name": "countriesVisited", "type": "List<String?>" },
+    { "name": "friends", "type": "List<User>" },
+    { "name": "teste1", "type": "String" },
+    { "name": "teste2", "type": "String" },
+    { "name": "teste3", "type": "String" },
+    { "name": "teste4", "type": "String" },
+    { "name": "teste5", "type": "String" },
+    { "name": "teste6", "type": "String" },
+    { "name": "teste7", "type": "String" },
+    { "name": "teste8", "type": "String" },
+    { "name": "teste9", "type": "String" },
+    { "name": "teste10", "type": "String" },
+    { "name": "teste11", "type": "String" },
+    { "name": "teste12", "type": "String" },
+    { "name": "teste13", "type": "String" },
+    { "name": "teste14", "type": "String" },
+    { "name": "romeu", "type": "int" }
+  ]
+}
