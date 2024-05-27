@@ -33,6 +33,8 @@ Future<void> run(HookContext context) async {
 
   logger.info('antes jsonFILE');
 
+  logger.info(context.vars['jsonFile']);
+
   final jsonFile = File(context.vars['jsonFile']);
 
   logger.info('DEPOIS jsonFILE');
