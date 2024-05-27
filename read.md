@@ -55,3 +55,6 @@ mason new nomeDoBrick
 mason new nomeDoBrick --desc "Descricao do brick"
 mason new example -o ./path/to/brick
 
+
+
+mason bundle ./path/to/brick -t dart -o ./path/to/destination

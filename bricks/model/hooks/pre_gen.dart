@@ -35,7 +35,7 @@ Future<void> run(HookContext context) async {
   final jsonFile = File(context.vars['jsonFile']);
   final jsonIndex = context.vars['jsonIndex'] as int;
 
-  /// Check for json file
+  /// Check for json file --jsonFile
   if (jsonFile.existsSync()) {
     context.vars = {
       ...context.vars,
