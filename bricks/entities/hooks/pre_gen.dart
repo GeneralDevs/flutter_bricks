@@ -31,6 +31,8 @@ Future<void> run(HookContext context) async {
     'jsonIndex': ((context.vars['jsonIndex'] as int?) ?? 0),
   };
 
+  logger.info('antes jsonFILE');
+
   final jsonFile = File(context.vars['jsonFile']);
 
   final jsonIndex = context.vars['jsonIndex'] as int;
