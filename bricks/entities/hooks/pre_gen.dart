@@ -12,6 +12,10 @@ import 'utils/recase.dart';
 
 Future<void> run(HookContext context) async {
   final logger = context.logger;
+
+  final infos = context.vars;
+
+  logger.info('$infos');
   final additionals = context.vars['additionals'] as List<dynamic>;
   var hasRelations = context.vars['relations'] != null &&
       (context.vars['relations'] as List).isNotEmpty;

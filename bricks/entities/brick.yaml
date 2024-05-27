@@ -36,3 +36,4 @@ vars:
     type: string
     description: Creates the model through json
     prompt: SKIP THIS IF NOT USING A JSON FILE
+# mason make entities -o ./generated/lib -c ./bricks/entities/entity.json
