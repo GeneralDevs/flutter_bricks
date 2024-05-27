@@ -7,7 +7,7 @@ import 'package:yaml/yaml.dart';
 import 'data_types.dart';
 import 'exceptions.dart';
 import 'property.dart';
-import '../../../utils/string_extensions.dart';
+import './utils/string_extensions.dart';
 
 abstract class ModelService {
   /// Verifies if the seeded properties / config is acceptable
