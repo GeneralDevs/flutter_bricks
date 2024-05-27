@@ -1,0 +1,8 @@
+/// Creates a copy of the current {{entity_name.pascalCase()}} with property changes
+{{entity_name.pascalCase()}} copyWith({{#hasProperties}}{ {{#properties}}
+  {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}}{{^isNullable}}?{{/isNullable}}{{#isNullable}} Function()?{{/isNullable}} {{name.camelCase()}},{{/properties}}
+}{{/hasProperties}}) {
+  return {{entity_name.pascalCase()}}({{#properties}}
+    {{name.camelCase()}}: {{name.camelCase()}}{{#isNullable}} != null ? {{name.camelCase()}}(){{/isNullable}} {{#isNullable}}:{{/isNullable}}{{^isNullable}}??{{/isNullable}} this.{{name.camelCase()}},{{/properties}}
+  );
+}
