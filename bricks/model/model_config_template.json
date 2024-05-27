@@ -1,0 +1,33 @@
+{
+  "model_name": "user",
+  "additionals": ["copyWith", "json", "equatable", "toString"],
+  "style": "basic",
+  "relations": [{ "name": "user" }],
+  "properties": [
+    { "name": "firstName", "type": "String?" },
+    { "name": "lastName", "type": "String?" },
+    { "name": "age", "type": "int" },
+    { "name": "isHappy", "type": "bool" },
+    { "name": "favouriteNumber", "type": "int" },
+    { "name": "nicknames", "type": "List<String>" },
+    { "name": "countriesVisited", "type": "List<String?>" },
+    { "name": "friends", "type": "List<User>" },
+    { "name": "one", "type": "String" },
+    { "name": "two", "type": "String" },
+    { "name": "awe", "type": "String" },
+    { "name": "owaeawne", "type": "String" },
+    { "name": "eawe", "type": "String" },
+    { "name": "awaeaw", "type": "String" },
+    { "name": "waeaw", "type": "String" },
+    { "name": "oeaweawne", "type": "String" },
+    { "name": "aweaw", "type": "String" },
+    { "name": "eaw", "type": "String" },
+    { "name": "eaw", "type": "String" },
+    { "name": "eweawewaa", "type": "String" },
+    { "name": "wae", "type": "String" },
+    { "name": "awe", "type": "String" },
+    { "name": "ewa", "type": "String" },
+    { "name": "ewa", "type": "String" },
+    { "name": "romeu", "type": "int" }
+  ]
+}

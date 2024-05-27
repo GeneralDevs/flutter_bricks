@@ -7,4 +7,5 @@ bricks:
     path: bricks/feature
   featuredartz:
     path: bricks/feature_dartz
-  model: ^0.8.0
+  teste:
+    path: bricks/model

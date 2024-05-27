@@ -1,5 +1,6 @@
 analyzer:
-  exclude: [bricks/**, 
+  exclude: [
+    # bricks/**, 
   # generated/**
   generated/page/**,
   generated/example_repo/lib/core/cubit/
