@@ -49,3 +49,9 @@ context.vars['name'] = 'jonas';
 
 
 
+para criar novos bricks
+
+mason new nomeDoBrick
+mason new nomeDoBrick --desc "Descricao do brick"
+mason new example -o ./path/to/brick
+
