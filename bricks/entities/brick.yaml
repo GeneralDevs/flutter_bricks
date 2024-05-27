@@ -22,6 +22,7 @@ vars:
       - json
       - equatable
       - toString
+  ## remover essa parada e passar direto
   style:
     type: enum
     default: basic
@@ -29,8 +30,7 @@ vars:
     prompt: What is the model style?
     values:
       - basic
-      - json_serializable
-      - freezed
+
   jsonFile:
     default: ""
     type: string
