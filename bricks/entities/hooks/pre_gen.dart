@@ -35,6 +35,8 @@ Future<void> run(HookContext context) async {
 
   final jsonIndex = context.vars['jsonIndex'] as int;
 
+  logger.info('antes json');
+
   /// Check for json file --jsonFile
   if (jsonFile.existsSync()) {
     context.vars = {
@@ -43,11 +45,11 @@ Future<void> run(HookContext context) async {
     };
   }
 
-  logger.info('${infos['json']}');
-
   /// If there is seeded-json, then handle json
-  if (context.vars['json'] is bool &&
+  if (context.vars['json'] is String &&
       (context.vars['json'] as String).isNotEmpty) {
+    logger.info('dentro json');
+
     final classes = ModelGenerator(context.vars['entity_name'])
         .generateClassDefinitions(context.vars['json'] as String);
     final classToParse =
@@ -71,6 +73,8 @@ Future<void> run(HookContext context) async {
         },
       )
     ];
+
+    logger.info('depois json');
 
 //todo! aqui eu concateno as variaveis do brick.yaml, adicionando outras.
     context.vars = {
