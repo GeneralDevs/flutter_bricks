@@ -29,21 +29,20 @@ Future<void> run(HookContext context) async {
     'use_equatable': additionals.contains('equatable'),
     'use_none': true,
     'jsonIndex': ((context.vars['jsonIndex'] as int?) ?? 0),
+    'jsonFile': '',
   };
 
-  logger.info('antes jsonFILE');
+  // logger.info('antes jsonFILE');
 
-  logger.info(context.vars['jsonFile']);
+  // logger.info(context.vars['jsonFile']);
+
+  logger.info('antes ${context.vars['jsonFile']}');
 
   final jsonFile = File(context.vars['jsonFile']);
 
-  logger.info('DEPOIS jsonFILE');
+  logger.info('DEPOIS $jsonFile');
 
   final jsonIndex = context.vars['jsonIndex'] as int;
-
-  logger.info('DEPOIS jsonIndex');
-
-  logger.info('antes if');
 
   /// Check for json file --jsonFile
   if (jsonFile.existsSync()) {
@@ -53,10 +52,14 @@ Future<void> run(HookContext context) async {
     };
   }
 
+  final json = context.vars['json'];
+
+  logger.info('VALOR DO JSON $json');
+
   /// If there is seeded-json, then handle json
   if (context.vars['json'] is String &&
       (context.vars['json'] as String).isNotEmpty) {
-    logger.info('dentro json');
+    logger.info('JSON DENTRO DO IF $json');
 
     final classes = ModelGenerator(context.vars['entity_name'])
         .generateClassDefinitions(context.vars['json'] as String);
