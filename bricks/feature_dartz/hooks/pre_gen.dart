@@ -37,7 +37,6 @@ Future<void> run(HookContext context) async {
       },
       onVarsChanged: (vars) => preGenVars = vars,
     );
-    logger.progress('PASSOU');
     await generator.generate(
       DirectoryGeneratorTarget(Directory.current),
       vars: preGenVars,
