@@ -12,7 +12,7 @@ bricks:
   models_bundle:
     path: bricks/models_bundle
   a:
-    path: bricks/a
+    path: test_bricks/a
 
   entities:
     path: bricks/entities
