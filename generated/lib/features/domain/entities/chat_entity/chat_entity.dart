@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:testando_poha/entidades/person.dart';
+import 'package:testando_poha/person.dart';
 
 
 base class Chat extends Equatable {

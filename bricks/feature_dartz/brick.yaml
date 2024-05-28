@@ -34,3 +34,5 @@ vars:
   #   description: aaa
   #   type: list
 # no list eu so escreve na cli oq quero dentro da lista ex banana, uva, pera  e ele ja coloca as [] em volta
+
+# mason make featuredartz -o ./generated/lib/ -c ./bricks/feature_dartz/feat.json

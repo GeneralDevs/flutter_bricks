@@ -14,13 +14,13 @@ Future<void> run(HookContext context) async {
   final logger = context.logger;
   final entities = context.vars['entities'];
   final generator = await MasonGenerator.fromBrick(
-    // Brick.path('C:/Users/gabri/Desktop/flutter_bricks/bricks/entities'),
-    Brick.git(
-      GitPath(
-        'https://github.com/GeneralDevs/flutter_bricks',
-        path: 'bricks/entities',
-      ),
-    ),
+    Brick.path('C:/Users/gabri/Desktop/flutter_bricks/bricks/entities'),
+    // Brick.git(
+    //   GitPath(
+    //     'https://github.com/GeneralDevs/flutter_bricks',
+    //     path: 'bricks/entities',
+    //   ),
+    // ),
   );
 
   Map<String, dynamic> preGenVars = {};
@@ -38,7 +38,8 @@ Future<void> run(HookContext context) async {
       onVarsChanged: (vars) => preGenVars = vars,
     );
     await generator.generate(
-      DirectoryGeneratorTarget(Directory.current),
+      DirectoryGeneratorTarget(
+          Directory('${Directory.current.path}/features/domain/entities')),
       vars: preGenVars,
       logger: context.logger,
     );
