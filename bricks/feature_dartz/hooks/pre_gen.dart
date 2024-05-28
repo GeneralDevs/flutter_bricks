@@ -45,6 +45,40 @@ Future<void> run(HookContext context) async {
     );
     progress.complete('Created ${entity['entity_name']}  RECEBA!');
   }
+
+  final models = context.vars['models'];
+  final generatorModel = await MasonGenerator.fromBrick(
+    Brick.path('C:/Users/gabri/Desktop/flutter_bricks/bricks/model'),
+    // Brick.git(
+    //   GitPath(
+    //     'https://github.com/GeneralDevs/flutter_bricks',
+    //     path: 'bricks/entities',
+    //   ),
+    // ),
+  );
+
+  Map<String, dynamic> preGenVarsModel = {};
+
+  for (var model in models) {
+    var progress = logger.progress('Creating ${model['model_name']}...');
+    await generatorModel.hooks.preGen(
+      vars: {
+        "model_name": model['model_name'],
+        "additionals": model['additionals'],
+        "style": model['style'],
+        "properties": model['properties'],
+        "relations": model['relations'],
+      },
+      onVarsChanged: (vars) => preGenVarsModel = vars,
+    );
+    await generatorModel.generate(
+      DirectoryGeneratorTarget(
+          Directory('${Directory.current.path}/features/data/models')),
+      vars: preGenVarsModel,
+      logger: context.logger,
+    );
+    progress.complete('Created ${model['model_name']}  RECEBA!');
+  }
 }
 
 /// Checks to see if the current output directory is in the
