@@ -14,6 +14,7 @@ Future<void> run(HookContext context) async {
   final logger = context.logger;
   final entities = context.vars['entities'];
   final generator = await MasonGenerator.fromBrick(
+    // Brick.path('C:/Users/gabri/Desktop/flutter_bricks/bricks/entities'),
     Brick.git(
       GitPath(
         'https://github.com/GeneralDevs/flutter_bricks',
