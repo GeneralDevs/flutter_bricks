@@ -30,6 +30,7 @@ Future<void> run(HookContext context) async {
     'use_serializable': modelStyle == 'json_serializable',
     'use_freezed': modelStyle == 'freezed',
     'jsonIndex': ((context.vars['jsonIndex'] as int?) ?? 0),
+    'jsonFile': '',
   };
 
   final jsonFile = File(context.vars['jsonFile']);
