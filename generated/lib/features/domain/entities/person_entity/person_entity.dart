@@ -1,8 +1,8 @@
 import 'package:equatable/equatable.dart';
 
 
-base class Person extends Equatable {
-  const Person({ 
+base class PersonEntity extends Equatable {
+  const PersonEntity({ 
     required this.id,
     required this.firstName,
     required this.lastName,

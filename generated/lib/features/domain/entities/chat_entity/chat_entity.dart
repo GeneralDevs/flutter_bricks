@@ -2,8 +2,8 @@ import 'package:equatable/equatable.dart';
 import 'package:testando_poha/person.dart';
 
 
-base class Chat extends Equatable {
-  const Chat({ 
+base class ChatEntity extends Equatable {
+  const ChatEntity({ 
     required this.id,
     required this.message,
     required this.sentTime,
