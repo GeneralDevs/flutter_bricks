@@ -2,6 +2,7 @@ analyzer:
   exclude: [
     # bricks/**, 
   # generated/**
+  test_bricks/**,
   generated/page/**,
   generated/example_repo/lib/core/cubit/
   ]
