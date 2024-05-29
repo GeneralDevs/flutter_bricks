@@ -15,7 +15,6 @@
         { "name": "sentTime", "type": "DateTime" },
         { "name": "chatImage", "type": "String" },
         { "name": "isForwarded", "type": "bool" },
-        { "name": "gustavoGay", "type": "bool" },
         { "name": "toUsers", "type": "List<Person>" }
       ]
     },

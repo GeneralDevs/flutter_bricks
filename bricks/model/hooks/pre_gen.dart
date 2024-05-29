@@ -75,7 +75,7 @@ Future<void> run(HookContext context) async {
     context.vars = {
       ...context.vars,
       'relations': (classToParse?.dependencies ?? [])
-          .map((e) => {'name': ReCase(e.name).snakeCase})
+          .map((e) => {'name': ReCase(e.name).snakeCase + 'Model'})
           .toList(),
       'model_name': (classToParse?.name ?? context.vars['model_name']),
       'properties': propertiesFromJson,

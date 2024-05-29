@@ -1,9 +1,9 @@
 {{#use_equatable}}import 'package:equatable/equatable.dart';{{/use_equatable}}
 {{> relations }}
 
-final class {{model_name.pascalCase()}}{{#use_equatable}} extends Equatable{{/use_equatable}} {
-  const {{model_name.pascalCase()}}({{#hasProperties}}{ {{#properties}}
-    {{^isNullable}}required {{/isNullable}}this.{{name.camelCase()}},{{/properties}}
+final class {{model_name.pascalCase()}}Model extends {{model_name.pascalCase()}}Entity {
+  const {{model_name.pascalCase()}}Model({{#hasProperties}}{ {{#properties}}
+    {{^isNullable}}required {{/isNullable}}super.{{name.camelCase()}},{{/properties}}
   }{{/hasProperties}});
 {{#use_json}}
   {{> basic_from_json }}{{/use_json}}
