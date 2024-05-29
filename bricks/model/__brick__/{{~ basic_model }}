@@ -1,15 +1,12 @@
-{{#use_equatable}}import 'package:equatable/equatable.dart';{{/use_equatable}}
+import '../../../domain/entities/{{model_name.snakeCase()}}_entity/{{model_name.snakeCase()}}_entity.dart';
 {{> relations }}
 
 final class {{model_name.pascalCase()}}Model extends {{model_name.pascalCase()}}Entity {
-  const {{model_name.pascalCase()}}Model({{#hasProperties}}{ {{#properties}}
-    {{^isNullable}}required {{/isNullable}}super.{{name.camelCase()}},{{/properties}}
-  }{{/hasProperties}});
+const {{model_name.pascalCase()}}Model({{#hasProperties}}{ {{#properties}}
+{{^isNullable}}required {{/isNullable}}super.{{name.camelCase()}},{{/properties}}
+}{{/hasProperties}});
 {{#use_json}}
-  {{> basic_from_json }}{{/use_json}}
-{{#properties}}
-  final {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}} {{name.camelCase()}};
-{{/properties}}
+{{> basic_from_json }}{{/use_json}}
 {{#use_json}}
-  {{> basic_to_json }}{{/use_json}}
+{{> basic_to_json }}{{/use_json}}
 }
