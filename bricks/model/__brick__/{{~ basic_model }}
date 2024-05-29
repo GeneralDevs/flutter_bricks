@@ -9,12 +9,7 @@ final class {{model_name.pascalCase()}}{{#use_equatable}} extends Equatable{{/us
   {{> basic_from_json }}{{/use_json}}
 {{#properties}}
   final {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}} {{name.camelCase()}};
-{{/properties}}{{#use_copywith}}
-  {{> copy_with }}{{/use_copywith}}
-{{#use_equatable}}
-  {{> equatable_props }}{{/use_equatable}}
+{{/properties}}
 {{#use_json}}
   {{> basic_to_json }}{{/use_json}}
-{{#use_tostring}}
-  {{> to_string }}{{/use_tostring}}
 }

@@ -6,7 +6,7 @@
 "entities": [
     {
       "entity_name": "chat",
-      "additionals": ["copyWith", "equatable"],
+      "additionals": [ "equatable"],
       "style": "basic",
       "relations": [{ "name": "person" }],
       "properties": [
@@ -21,7 +21,7 @@
     },
     {
       "entity_name": "person",
-      "additionals": ["copyWith", "equatable"],
+      "additionals": [ "equatable"],
       "style": "basic",
       "properties": [
         { "name": "id", "type": "int" },
