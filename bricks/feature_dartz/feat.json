@@ -1,6 +1,6 @@
 {  
 
-"feature" : "Auth",
+"feature" : "User",
 "response": true,
 "http_method": "post",
 "entities": [
@@ -15,6 +15,7 @@
         { "name": "sentTime", "type": "DateTime" },
         { "name": "chatImage", "type": "String" },
         { "name": "isForwarded", "type": "bool" },
+        { "name": "gustavoGay", "type": "bool" },
         { "name": "toUsers", "type": "List<Person>" }
       ]
     },
@@ -38,7 +39,7 @@
 "models": [
     {
       "model_name": "chat",
-      "additionals": ["copyWith", "equatable"],
+      "additionals": [ "json"],
       "style": "basic",
       "relations": [{ "name": "person" }],
       "properties": [
@@ -52,7 +53,7 @@
     },
     {
       "model_name": "person",
-      "additionals": ["copyWith", "equatable"],
+      "additionals": [ "json"],
       "style": "basic",
       "properties": [
         { "name": "id", "type": "int" },
