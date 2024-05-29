@@ -12,6 +12,9 @@ Future<void> run(HookContext context) async {
   if (hasRelations) await _validateDirectory(context);
 
   final logger = context.logger;
+  String feature = context.vars['feature'];
+  feature = feature.snakeCase;
+
   final entities = context.vars['entities'];
   final generator = await MasonGenerator.fromBrick(
     Brick.path('C:/Users/gabri/Desktop/flutter_bricks/bricks/entities'),
@@ -37,9 +40,10 @@ Future<void> run(HookContext context) async {
       },
       onVarsChanged: (vars) => preGenVars = vars,
     );
+
     await generator.generate(
-      DirectoryGeneratorTarget(
-          Directory('${Directory.current.path}/features/domain/entities')),
+      DirectoryGeneratorTarget(Directory(
+          '${Directory.current.path}/features/$feature/domain/entities')),
       vars: preGenVars,
       logger: context.logger,
     );
@@ -73,7 +77,10 @@ Future<void> run(HookContext context) async {
     );
     await generatorModel.generate(
       DirectoryGeneratorTarget(
-          Directory('${Directory.current.path}/features/data/models')),
+        Directory(
+          '${Directory.current.path}/features/$feature/data/models',
+        ),
+      ),
       vars: preGenVarsModel,
       logger: context.logger,
     );

@@ -12,6 +12,10 @@ vars:
     type: boolean
     default: false
     prompt: Voce tera uma response?
+  is_statefull:
+    type: boolean
+    default: false
+    prompt: A sua pagina sera um statefull?
   http_method:
     default: GET
     description: The HTTP method to use.

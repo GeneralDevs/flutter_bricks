@@ -1,6 +1,6 @@
 {  
-
-"feature" : "User",
+"is_statefull": "true",
+"feature" : "UserFoda",
 "response": true,
 "http_method": "post",
 "entities": [
