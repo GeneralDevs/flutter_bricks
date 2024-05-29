@@ -1,6 +1,6 @@
 {  
-"is_statefull": "true",
-"feature" : "UserFoda",
+"is_statefull": true,
+"feature" : "CreditLimit",
 "response": true,
 "http_method": "post",
 "entities": [
