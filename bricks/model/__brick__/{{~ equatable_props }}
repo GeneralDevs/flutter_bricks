@@ -1,4 +1,0 @@
-@override
-List<Object?> get props => [{{#properties}}
-      {{name.camelCase()}},{{/properties}}
-    ];
