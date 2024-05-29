@@ -14,7 +14,7 @@ sealed class {{feature.pascalCase()}}Inject {
 
     getIt.registerFactory<{{feature.pascalCase()}}Datasource>(
       () => {{feature.pascalCase()}}DatasourceImpl(
-        restClientPost: getIt<RestClientPost>(),
+        restClient{{http_method.pascalCase()}}: getIt<RestClient{{http_method.pascalCase()}}>(),
       ),
     );
   }
