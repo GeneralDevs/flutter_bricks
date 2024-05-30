@@ -5,16 +5,15 @@ base class {{entity_name.pascalCase()}}Entity{{#use_equatable}} extends Equatabl
   const {{entity_name.pascalCase()}}Entity({{#hasProperties}}{ {{#properties}}
     {{^isNullable}}required {{/isNullable}}this.{{name.camelCase()}},{{/properties}}
   }{{/hasProperties}});
-{{#use_json}}
-  {{> basic_from_json }}{{/use_json}}
+
 {{#properties}}
   final {{#hasSpecial}}{{{type}}}{{/hasSpecial}}{{^hasSpecial}}{{type}}{{/hasSpecial}} {{name.camelCase()}};
 {{/properties}}{{#use_copywith}}
+
+
+
   {{> copy_with }}{{/use_copywith}}
 {{#use_equatable}}
   {{> equatable_props }}{{/use_equatable}}
-{{#use_json}}
-  {{> basic_to_json }}{{/use_json}}
-{{#use_tostring}}
-  {{> to_string }}{{/use_tostring}}
+
 }

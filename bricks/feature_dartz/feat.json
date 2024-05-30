@@ -30,8 +30,8 @@
         { "name": "isHappy", "type": "bool" },
         { "name": "favouriteNumber", "type": "int" },
         { "name": "nicknames", "type": "List<String>" },
-        { "name": "countriesVisited", "type": "List<String>" },
-        { "name": "organizationId", "type": "String" }
+        { "name": "countriesVisited", "type": "List<Person>" },
+        { "name": "organizationId", "type": "Person" }
       ]
     }
   ],

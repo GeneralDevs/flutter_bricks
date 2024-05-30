@@ -83,17 +83,47 @@ Please check the variable names of your properties. It should be along the lines
     List<Map<String, dynamic>> properties,
     Property property,
   ) {
-    final hasSpecial = property.type.toLowerCase().contains('<') ||
+    final hasGenerics = property.type.toLowerCase().contains('<') ||
         property.type.toLowerCase().contains('>');
-    final listProperties = getCustomListProperties(hasSpecial, property.type);
+    final listProperties = getCustomListProperties(hasGenerics, property.type);
     final isCustomDataType =
-        !DataTypes.values.contains(property.type.cleaned) && !hasSpecial;
+        !DataTypes.values.contains(property.type.cleaned) && !hasGenerics;
+
+    String customType(String type) {
+      //funcao para colocar o Entity dentro do generics, ou fora se for um tipo customizado
+      //deixar o codigo melhor awuheihaus
+      final list = DataTypes.values;
+
+      if (hasGenerics) {
+        list.remove('List');
+
+        bool containsCustomType = !list.any(
+          (element) => type.toLowerCase().contains(
+                element.toLowerCase(),
+              ),
+        );
+
+        return containsCustomType ? type.replaceAll('>', 'Entity>') : type;
+      }
+
+      if (list.any(
+        (element) => type.toLowerCase().contains(
+              element.toLowerCase(),
+            ),
+      )) {
+        return type;
+      }
+      return '${type}Entity';
+    }
+    //tODO! arrumar o fromJson na model agr.
+
     properties
       ..forEach((e) => e['isLastProperty'] = false)
       ..add({
         'name': property.name,
-        'type': property.type,
-        'hasSpecial': hasSpecial,
+        // 'type': property.type,
+        'type': customType(property.type),
+        'hasSpecial': hasGenerics,
         'isCamelCase': property.isCamelCase,
         'isNullable': property.isNullable,
         'isCustomDataType': isCustomDataType,
