@@ -1,6 +1,17 @@
+import '{{feature.snakeCase()}}_datasource.dart';
+
+
 final class {{feature.pascalCase()}}DatasourceImpl 
     implements {{feature.pascalCase()}}Datasource {
   const {{feature.pascalCase()}}DatasourceImpl({required RestClient{{http_method.pascalCase()}} restClient{{http_method.pascalCase()}}})
+      : _restClient{{http_method.pascalCase()}} = restClient{{http_method.pascalCase()}};
+
+  final RestClient{{http_method.pascalCase()}} _restClient{{http_method.pascalCase()}};
+
+
+
+
+
 }
 
 
