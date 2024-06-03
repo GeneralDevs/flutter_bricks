@@ -1,3 +1,10 @@
+import '../../data/datasources/{{feature.snakeCase()}}/{{feature.snakeCase()}}_datasource.dart';
+import '../../data/datasources/{{feature.snakeCase()}}/{{feature.snakeCase()}}_datasource_impl.dart';
+import '../../data/repositories/{{feature.snakeCase()}}/{{feature.snakeCase()}}_repository_impl.dart';
+import '../../domain/repository/{{feature.snakeCase()}}/{{feature.snakeCase()}}_repository.dart';
+import '../../domain/usecases/{{feature.snakeCase()}}/{{feature.snakeCase()}}_usecase.dart';
+import '../../domain/usecases/{{feature.snakeCase()}}/{{feature.snakeCase()}}_usecase_impl.dart';
+
 sealed class {{feature.pascalCase()}}Inject {
   static void inject(GetIt getIt) {
     getIt.registerFactory<{{feature.pascalCase()}}Usecase>(
