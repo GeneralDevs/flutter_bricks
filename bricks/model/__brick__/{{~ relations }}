@@ -1,2 +1,2 @@
-{{#hasRelations}}{{#relations}}import '../{{model_name.snakeCase()}}_model/{{model_name.snakeCase()}}_model.dart';
+{{#hasRelations}}{{#relations}}import '../{{name.snakeCase()}}_model/{{name.snakeCase()}}_model.dart';
 {{/relations}}{{/hasRelations}}
