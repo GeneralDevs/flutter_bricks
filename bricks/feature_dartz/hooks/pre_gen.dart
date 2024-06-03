@@ -17,13 +17,13 @@ Future<void> run(HookContext context) async {
 
   final entities = context.vars['entities'];
   final generator = await MasonGenerator.fromBrick(
-    Brick.path('C:/Users/gabri/Desktop/flutter_bricks/bricks/entities'),
-    // Brick.git(
-    //   GitPath(
-    //     'https://github.com/GeneralDevs/flutter_bricks',
-    //     path: 'bricks/entities',
-    //   ),
-    // ),
+    // Brick.path('C:/Users/gabri/Desktop/flutter_bricks/bricks/entities'),
+    Brick.git(
+      GitPath(
+        'https://github.com/GeneralDevs/flutter_bricks',
+        path: 'bricks/entities',
+      ),
+    ),
   );
 
   Map<String, dynamic> preGenVars = {};
