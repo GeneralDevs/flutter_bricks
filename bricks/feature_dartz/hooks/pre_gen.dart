@@ -52,13 +52,13 @@ Future<void> run(HookContext context) async {
 
   final models = context.vars['models'];
   final generatorModel = await MasonGenerator.fromBrick(
-    Brick.path('C:/Users/gabri/Desktop/flutter_bricks/bricks/model'),
-    // Brick.git(
-    //   GitPath(
-    //     'https://github.com/GeneralDevs/flutter_bricks',
-    //     path: 'bricks/entities',
-    //   ),
-    // ),
+    // Brick.path('C:/Users/gabri/Desktop/flutter_bricks/bricks/model'),
+    Brick.git(
+      GitPath(
+        'https://github.com/GeneralDevs/flutter_bricks',
+        path: 'bricks/model',
+      ),
+    ),
   );
 
   Map<String, dynamic> preGenVarsModel = {};
